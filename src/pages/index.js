@@ -26,6 +26,11 @@ export default function Home() {
           <div className="flex bg-gray-300 rounded-lg  justify-center gap-4 w-96 h-72  p-4 ">
             <div className=" rounded-full  p-3  justify-center items-center  ">
                </div>
+              
+               <h2 className="pr-20 pt-20 font-bold text-4xl">Total Shops
+                <br/>150
+               </h2>
+               
             </div>
           <div className="flex  bg-gray-300 rounded-lg  justify-center gap-4 w-96 p-4 h-72">
            <div className=" rounded-full  p-3  justify-center items-center  ">

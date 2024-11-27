@@ -28,15 +28,15 @@ export default function Sidebar() {
           <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
           <li>
-            <a href="analytic" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
+            <a href="" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
             <ion-icon name="bar-chart-outline" style={{ fontSize: '24px' }}></ion-icon>
-              Analytic
+              Shop Management
             </a>
           </li>
           <li>
-            <a href="/shops" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
+            <a href="" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
             <ion-icon name="cart-outline" style={{ fontSize: '24px' }}></ion-icon>
-              Shops
+              Product Management
   
             </a>
           </li>
