@@ -1,9 +1,14 @@
-export default function Navbar() {
+import { useState } from "react";
+import Link from 'next/link';
+
+
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
     return (
-      <div className="pt-10 pl-10 flex ">
-  <div>
-  <p className=" font-bold text-2xl">SHOPYANGU</p>
-  </div>
+      <div>
+        
       </div>
     )
     }
+    export default Navbar;

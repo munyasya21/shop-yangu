@@ -5,7 +5,13 @@ import Link from 'next/link';
 const Sidebar = () => {
   return (
     <div className="bg-gray-800 text-white w-64 h-screen p-5">
-      <ul>
+      <div className="pt-5 flex ">
+  <div>
+  <p className=" font-bold text-2xl">SHOPYANGU</p>
+  </div>
+  
+      </div>
+      <ul className='pt-10'>
       
         <li className="mb-4 flex group  gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
         <svg class="size-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">

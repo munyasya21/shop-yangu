@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from 'react';
-import Link from "next/link";
+
 import Sidebar from "../pages/components/Sidebar.jsx";
 import Navbar from "../pages/components/Navbar.jsx";
 import Dashboard from "../pages/components/Dashboard.jsx";
-import ShopTable from "../pages/components/ShopTable.jsx"
+import StockStatusChart from "../pages/components/StockStatusChart.jsx";
+
 
 
 
@@ -27,6 +28,10 @@ const HomePage = () => {
 <div className="flex flex-col">
        <Dashboard/>
          </div>
+         <div>
+<StockStatusChart/>
+         </div>
+         
           </div>
   );
 };
