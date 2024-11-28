@@ -6,11 +6,9 @@ import Link from "next/link";
 export default function Sidebar() {
     return (
 <div>
-
 <div class="flex grow flex-col gap-y-5 overflow-y-auto max-h-full  px-6 w-60 pl-10">
   <div class="flex ">
-  
-  </div>
+   </div>
   <nav class="flex flex-1 flex-col ">
     <ul role="list" class="flex flex-1 flex-col gap-y-7">
       <li>
@@ -40,12 +38,7 @@ export default function Sidebar() {
   
             </a>
           </li>
-          <li>
-            
-          </li>
-          <li>
-            
-          </li>
+          
           <li>
             <a href="#" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
               <svg class="size-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -55,13 +48,15 @@ export default function Sidebar() {
               Reports
             </a>
           </li>
+          <li>
+            <a href="#" class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
+            <ion-icon name="settings" style={{ fontSize: '24px' }}></ion-icon>
+              Settings
+            </a>
+          </li>
         </ul>
       </li>
-      <li>
-        
-      </li>
-      
-    </ul>
+     </ul>
   </nav>
 </div>
 
