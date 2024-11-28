@@ -26,15 +26,8 @@ const HomePage = () => {
 
 <div className="flex flex-col">
        <Dashboard/>
-       <div>
- 
-      
-    </div>
-
-      </div>
- 
- 
-    </div>
+         </div>
+          </div>
   );
 };
 
