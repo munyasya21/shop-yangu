@@ -32,9 +32,7 @@ const HomePage = () => {
     </div>
 
       </div>
- <div>
-  <ShopTable/>
- </div>
+ 
  
     </div>
   );
