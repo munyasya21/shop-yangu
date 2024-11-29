@@ -16,7 +16,7 @@ import StockStatusChart from "../pages/components/StockStatusChart.jsx";
 
 const HomePage = () => {
   return (
-    <div className=" text-black flex bg-black">
+    <div className=" text-black flex">
       <div className="flex-col">
 <div>
   <Navbar/>
