@@ -20,8 +20,8 @@ const ShopTable = () => {
                 <table class="flex-1">
                   <thead>
                   <tr class="bg-[#1b2227]">
-                      <th class=" px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Shop Name</th>
-                      <th class=" px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Shop Description</th>
+                      <th class=" px-4 py-3 text-left text-white w-96 text-sm font-medium leading-normal">Shop Name</th>
+                      <th class=" px-4 py-3 text-left text-white w-96 text-sm font-medium leading-normal">Shop Description</th>
                       <th class=" px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal">Shop Logo</th>
                       <th class="px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal"></th>
                       <th class="px-4 py-3 text-left text-white w-60  text-sm font-medium leading-normal">Actions</th>
@@ -29,8 +29,10 @@ const ShopTable = () => {
                   </thead>
                   <tbody>
                     <tr class="border-t border-t-[#3b4954]">
-                      <td class=" h-16 px-4 py-2 w-[400px] text-white text-sm font-normal leading-normal">Bosschiq</td>
-                      <td class=" h-16 px-4 py-2 w-[400px] text-gray-400 text-sm font-normal leading-normal">Where you meet Boss Ladies Wear</td>
+                      <td class=" h-16 px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
+                      <a href="" class="text-white hover:underline">Bosschiq</a>
+                      </td>
+                      <td class=" h-16 px-4 py-2 w-96 text-gray-400 text-sm font-normal leading-normal">Where you meet Boss Ladies Wear</td>
                       <td class=" h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
                         
                       </td>
@@ -52,7 +54,9 @@ const ShopTable = () => {
                       
                     </tr>
                     <tr class="border-t border-t-gray-600">
-                      <td class=" h-[72px] px-4 py-2 w-96 text-white text-sm font-normal leading-normal">KakaLuxe</td>
+                      <td class=" h-[72px] px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
+                      <a href="" class="text-white hover:underline">KakaLuxe</a>
+                      </td>
                       <td class=" h-[72px] px-4 py-2 w-96 text-[#9cacba] text-sm font-normal leading-normal">Where you meet MenLuxe Wear</td>
                       <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         

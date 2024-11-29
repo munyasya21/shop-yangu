@@ -16,10 +16,10 @@ const Dashboard = () => {
       </div>
      <div className='flex pl-60'>
      <select onChange={(e) => setPriceFilter(e.target.value)} className="bg-white rounded py-2 px-2 mr-2">
-          <option value="">Filter by Shop</option>
-          <option value="10">Up to $10</option>
-          <option value="20">Up to $20</option>
-          <option value="50">Up to $50</option>
+          <option name="">Filter by Shop</option>
+          <option name="">BossChiq</option>
+          <option name="">KakaLuxe</option>
+          
         </select>
         <select onChange={(e) => setPriceFilter(e.target.value)} className="bg-white rounded py-2 px-2 mr-2">
           <option name="">Filter by Price</option>
@@ -59,23 +59,20 @@ const Dashboard = () => {
            <p className="font-semibold">$5000</p>
            <h2 className="text-3xl font-semibold pt-8">
                Total Value Of Products
-              
                </h2>
-              
-                </div>
+              </div>
             </a>
-            <div className="flex bg-white rounded-lg  justify-center gap-4 w-60 p-4 h-44">
+            <a href='/product-management' className="flex bg-white rounded-lg  justify-center gap-4 w-60 p-4 h-44">
            <div className=" rounded-full  p-3  justify-center items-center  ">
            <p className="font-semibold">20</p>
            <h2 className="text-3xl font-semibold pt-8">
                Total Stock Level
                </h2>
-             
-                </div>
-            </div>
- </div>
- <div class="flex flex-wrap gap-4 px-4 py-6">
-              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#3b4954] p-6">
+              </div>
+            </a>
+           </div>
+            <div class="flex flex-wrap gap-4 px-4 py-6">
+              <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border  border-gray-700 p-6">
                 <p class="text-white text-base font-medium leading-normal">Sales in the last 30 days</p>
                 <div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
                   <svg width="100%" height="148" viewBox="-3 0 478 150" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -97,11 +94,11 @@ const Dashboard = () => {
                     </defs>
                   </svg>
                   <div class="flex justify-around">
-                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-[0.015em]">Jun 1</p>
-                    <p class= "text-gray-400 text-sm font-bold leading-normal tracking-[0.015em]">Jun 8</p>
-                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-[0.015em]">Jun 15</p>
-                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-[0.015em]">Jun 22</p>
-                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-[0.015em]">Jun 29</p>
+                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-widest">Jun 1</p>
+                    <p class= "text-gray-400 text-sm font-bold leading-normal tracking-widest">Jun 8</p>
+                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-widest">Jun 15</p>
+                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-widest">Jun 22</p>
+                    <p class=" text-gray-400 text-sm font-bold leading-normal tracking-widest">Jun 29</p>
                   </div>
                 </div>
               </div>
