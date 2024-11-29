@@ -104,9 +104,53 @@ const Dashboard = () => {
               </div>
               <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-[#3b4954] p-6">
                 <p class="text-white text-base font-medium leading-normal">Orders in the last 30 days</p>
-                
+                <div class="grid min-h-[180px] gap-x-4 gap-y-6  items-center py-3">
+                  <p class="text-[#9cacba] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun 1</p>
+                  <div class="h-full flex-1"><div class="border-[#9cacba] bg-[#283139] border-r-2 h-full"></div></div>
+                  <p class="text-[#9cacba] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun 8</p>
+                  <div class="h-full flex-1"><div class="border-[#9cacba] bg-[#283139] border-r-2 h-full"></div></div>
+                  <p class="text-[#9cacba] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun 15</p>
+                  <div class="h-full flex-1"><div class="border-[#9cacba] bg-[#283139] border-r-2 h-full" ></div></div>
+                  <p class="text-[#9cacba] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun 22</p>
+                  <div class="h-full flex-1"><div class="border-[#9cacba] bg-[#283139] border-r-2 h-full" ></div></div>
+                  <p class="text-[#9cacba] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun 29</p>
+                  <div class="h-full flex-1"><div class="border-[#9cacba] bg-[#283139] border-r-2 h-full"></div></div>
+                </div>
               </div>
+             
               </div>
+               <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Quick Actions</h2>
+               <div class="p-4 @container">
+                 <div class="flex flex-1 items-start justify-between gap-4 rounded-xl border border-[#3b4954] bg-black p-5 @[480px]:flex-row @[480px]:items-center">
+                   <p class="text-white text-base font-bold leading-tight">Add your first product</p>
+                   <button
+                     class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2094f3] text-white text-sm font-medium leading-normal"
+                   >
+                     <span class="truncate">Add Product</span>
+                   </button>
+                 </div>
+                 
+               </div>
+               <div class="p-4 @container">
+               <div class="flex flex-1  items-start justify-between gap-4 rounded-xl border border-[#3b4954] bg-[#111518] p-5 @[480px]:flex-row @[480px]:items-center">
+                 <p class="text-white text-base font-bold leading-tight">Set up your shop</p>
+                 <button
+                   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2094f3] text-white text-sm font-medium leading-normal"
+                 >
+                   <span class="truncate">Set Up Shop</span>
+                 </button>
+               </div>
+             </div>
+             <div class="p-4 @container">
+             <div class="flex flex-1  items-start justify-between gap-4 rounded-xl border border-[#3b4954] bg-[#111518] p-5 @[480px]:flex-row @[480px]:items-center">
+               <p class="text-white text-base font-bold leading-tight">Create your first discount</p>
+               <button
+                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-[#2094f3] text-white text-sm font-medium leading-normal"
+               >
+                 <span class="truncate">Create Discount</span>
+               </button>
+             </div>
+           </div>
               
       </div>
     )
