@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <div className="bg-gray-800 text-white w-64 h-screen p-5">
+    <div className="bg-black text-white w-64 h-screen p-5">
       <div className="pt-5 flex ">
   <div>
   <p className=" font-bold text-2xl">SHOPYANGU</p>
@@ -22,7 +22,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script noModule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <li className="mb-4 group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white">
         <ion-icon name="bar-chart-outline" style={{ fontSize: '24px' }}></ion-icon>
           <Link href="/shop-management">
