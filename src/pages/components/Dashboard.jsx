@@ -7,9 +7,7 @@ const Dashboard = () => {
     return (
 
       <div className="pt-20 pl-10 ">
-
-      
-        <div className='flex '>
+         <div className='flex '>
             <div> 
       <h2 className="text-white text-2xl font-bold  ">Good Evening Our Customers</h2>
       <p className="text-lg  text-white font-light">We Are Here To Serve You!</p>

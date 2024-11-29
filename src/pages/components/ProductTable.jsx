@@ -141,14 +141,14 @@ const ProductTable = () => {
         <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
         <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Update</span>
                         </button>
                       </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                      <td class=" h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
@@ -194,7 +194,7 @@ const ProductTable = () => {
                       </td>
                       <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
@@ -217,7 +217,7 @@ const ProductTable = () => {
                       </td>
                       <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
@@ -240,7 +240,7 @@ const ProductTable = () => {
                       </td>
                       <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
@@ -263,7 +263,7 @@ const ProductTable = () => {
                       </td>
                       <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
