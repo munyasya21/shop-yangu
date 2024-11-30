@@ -7,10 +7,10 @@ import lsneakers from "../assets/images/lsneakers.jpg"
 
 
 
-const ClothingTablePage = () => {
+const ClothingTablePage = ({data}) => {
   return (
     <div className="p-4 bg-black text-white ">
-      <ClothingTable/> 
+      <ClothingTable  data={data}/> 
       <div className="pt-20 pl-20 flex gap-10">
         <div>
        <Image src={dress}
@@ -48,3 +48,16 @@ const ClothingTablePage = () => {
 };
 
 export default ClothingTablePage;
+
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/bosschiq_products');
+
+
+  const data = await res.json();
+
+  return {
+      props: {
+          data
+      },
+  };
+}

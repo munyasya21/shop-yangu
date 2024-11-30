@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-const ProductTable = () => {
+const ProductTable = ({data}) => {
     
   const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({
     name: '',
     price: '',
-    stockLevel: '',
-    description: '',
-    image: null,
+    stock: '',
+    price: '',
+    // image: null,
   });
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,10 +30,59 @@ const ProductTable = () => {
     }));
   };
 
+  // Add product to the database
+
+  const addProduct = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newProduct),
+      });
+      const data = await response.json();
+      console.log('Product added:', data);
+      alert('Product added successfully!');
+      window.location.reload();
+      setNewProduct({ name: '', price: '', stockLevel: '', description: '', });
+
+    } catch (error) {
+      console.error('Error adding product:', error);
+      alert('Failed to add product!');
+    }
+  };
+
+  // Delete product by ID
+
+  const deleteProduct = async (productId,productStock) => {
+    if (productStock > 0) {
+      alert('Product has stock. Cannot delete product.');
+      return;
+    }
+    try {
+      const response = await fetch(`http://localhost:3000/products/${productId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        console.log(`Product with ID ${productId} deleted successfully.`);
+        alert(`Product with ID ${productId} deleted successfully.`);
+        window.location.reload();
+      } else {
+        console.error(`Failed to delete product with ID ${productId}.`);
+        alert(`Failed to delete product with ID ${productId}.`);
+      }
+    } catch (error) {
+      console.error('Error deleting product:', error);
+      alert('An error occurred while deleting the product.');
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setProducts((prev) => [...prev, newProduct]);
-    setNewProduct({ name: '', price: '', stockLevel: '', description: '', image: null });
+
+    addProduct();
   };
 
   const handleDelete = (id) => {
@@ -124,21 +173,24 @@ const ProductTable = () => {
     <table className="min-w-full border-collapse border border-gray-200">
       <thead>
         <tr>
-          <th className="border border-gray-300 p-2">Product Name</th>
-          <th className="border border-gray-300 p-2">Price</th>
-          <th className="border border-gray-300 p-2">Stock Level</th>
-          <th className="border border-gray-300 p-2">Product Image</th>
+          <th className="border border-gray-300 text-left px-4 p-2">Product Name</th>
+          <th className="border border-gray-300 text-left p-2">Price</th>
+          <th className="border border-gray-300  text-left p-2">Stock Level</th>
+          <th className="border border-gray-300  text-left p-2">Product Image</th>
+          <th className="border border-gray-300  text-left p-2">Shop</th>
           <th className="border border-gray-300 p-2">Actions</th>
         
         </tr>
         
       </thead>
       <tbody>
+        {data.map((product) => (
         <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">Blazers</td>
+        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">{product.name}</td>
         <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$20</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">1</td>
+        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">{product.stock}</td>
         <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
+        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">{product.shop}</td>
         <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
                           class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
@@ -148,129 +200,18 @@ const ProductTable = () => {
                       </td>
                       <td class=" h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
                         <button
+                        onClick={() => deleteProduct(product.id,product.stock)}
                           class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
                         >
                           <span class="truncate">Delete</span>
                         </button>
                       </td>
         </tr>
+        ))}
+
         
  </tbody>
- <tbody>
-        <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">T-Shirt</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$15</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">5</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
-        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Update</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-        </tr>
-        
- </tbody>
- <tbody>
-        <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">Sneakers</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$25</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">0</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
-        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Update</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-        </tr>
-        
- </tbody>
- <tbody>
-        <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">Jeans</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$18</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">90</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
-        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Update</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-        </tr>
-        
- </tbody>
- <tbody>
-        <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">Skirts</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$12</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">50</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
-        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Update</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-        </tr>
-        
- </tbody>
- <tbody>
-        <tr>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">Dresses</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$15</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">20</td>
-        <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal"></td>
-        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Update</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-20 max-w-96 cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-        </tr>
-        
- </tbody>
+
  
        </table>
     

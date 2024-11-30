@@ -1,0 +1,21 @@
+{
+  "shops": [
+    {
+      "id": "1",
+      "title": "BossChiq"
+    },
+    {
+      "id": "2",
+      "title": "KakaLuxe"
+    }
+  ],
+  "products": [
+    {
+      "id": "3",
+      "name": "Jeans",
+      "stock": "90",
+      "price": "20",
+      "shop": "BossChiq"
+    }
+  ]
+}

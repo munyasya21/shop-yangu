@@ -1,14 +1,81 @@
 // ShopTable.jsx
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 
 
 
 
 
-const ShopTable = () => {
+const ShopTable = ({data}) => {
     
-  
+// console.log('data in table',data)
+
+  const [name, setName] = useState('John Doe');
+  const [isEditing, setIsEditing] = useState(false);
+  const [inputValue, setInputValue] = useState(name);
+
+  const handleEditClick = () => {
+      setInputValue(name); // Set input value to current name
+      setIsEditing(true);  // Switch to editing mode
+  };
+
+  const handleSaveClick = () => {
+      setName(inputValue);  // Update the displayed name
+      setIsEditing(false);   // Exit editing mode
+  };
+   // Add product to the database
+
+   const addProduct = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/shop', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newProduct),
+      });
+      const data = await response.json();
+      console.log('shop added:', data);
+      alert('shop added successfully!');
+      window.location.reload();
+      setNewShop({ name: '', description: '', logo: '', });
+
+    } catch (error) {
+      console.error('Error adding product:', error);
+      alert('Failed to add product!');
+    }
+  };
+
+  // Delete product by ID
+
+  const deleteShop = async (shopId,shopStock) => {
+    if (shopStock > 0) {
+      alert('Product has stock. Cannot delete product.');
+      return;
+    }
+    try {
+      const response = await fetch(`http://localhost:3000/products/${shopId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        console.log(`Product with ID ${shopId} deleted successfully.`);
+        alert(`Product with ID ${shopId} deleted successfully.`);
+        window.location.reload();
+      } else {
+        console.error(`Failed to delete shop with ID ${shopId}.`);
+        alert(`Failed to delete shop with ID ${shopId}.`);
+      }
+    } catch (error) {
+      console.error('Error deleting shop:', error);
+      alert('An error occurred while deleting the product.');
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    addShop();
+  };
+
    
   return (
     <div className='bg-black text-white  '>
@@ -20,62 +87,45 @@ const ShopTable = () => {
                 <table class="flex-1">
                   <thead>
                   <tr class="bg-[#1b2227]">
-                      <th class=" px-4 py-3 text-left text-white w-96 text-sm font-medium leading-normal">Shop Name</th>
+                      <th class=" px-4 py-3 text-left text-white w-96 text-sm font-medium leading-normal">Shop name</th>
                       <th class=" px-4 py-3 text-left text-white w-96 text-sm font-medium leading-normal">Shop Description</th>
                       <th class=" px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal">Shop Logo</th>
-                      <th class="px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal"></th>
+                      <th class="px-4 py-3 text-left text-white w-60 text-sm font-medium leading-normal">Shop Logo</th>
                       <th class="px-4 py-3 text-left text-white w-60  text-sm font-medium leading-normal">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="border-t border-t-[#3b4954]">
-                      <td class=" h-16 px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
-                      <a href="/clothing-management" class="text-white hover:underline">Bosschiq</a>
-                      </td>
-                      <td class=" h-16 px-4 py-2 w-96 text-gray-400 text-sm font-normal leading-normal">Where you meet Boss Ladies Wear</td>
-                      <td class=" h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
+                  {data.map((shop,index) => 
+                      (
+                        <tr key={index} class="border-t border-t-[#3b4954]">
+                        <td class=" h-16 px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
+                        <a href="/clothing-management" class="text-white hover:underline">{shop.title}</a>
+                        </td>
+                        <td class=" h-16 px-4 py-2 w-96 text-gray-400 text-sm font-normal leading-normal">Where you meet Boss Ladies Wear</td>
+                        <td class=" h-16 px-4 py-2 w-60 text-sm font-serif leading-normal">
+                          Classic
+                        </td>
+                        <td class="table-c8234f4f-1a99-455f-8192-13d7066d4fcb-column-480 h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4  bg-gray-700 text-white text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Edit</span>
+                          </button>
+                        </td>
+                        <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                          <button
+                           onClick={() => deleteShop(shop.id)}
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4  bg-red-700 text-white text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Delete</span>
+                          </button>
+                        </td>
                         
-                      </td>
-                      <td class="table-c8234f4f-1a99-455f-8192-13d7066d4fcb-column-480 h-16 px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4  bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Edit</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4  bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
-                      
-                      
-                    </tr>
-                    <tr class="border-t border-t-gray-600">
-                      <td class=" h-[72px] px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
-                      <a href="/mens-clothing" class="text-white hover:underline">KakaLuxe</a>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-96 text-[#9cacba] text-sm font-normal leading-normal">Where you meet MenLuxe Wear</td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
                         
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-gray-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Edit</span>
-                        </button>
-                      </td>
-                      <td class=" h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                        <button
-                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 px-4 bg-red-700 text-white text-sm font-medium leading-normal w-full"
-                        >
-                          <span class="truncate">Delete</span>
-                        </button>
-                      </td>
                       </tr>
+                      )
+                    )}
+
                   </tbody>
                 </table>
               </div>
@@ -97,6 +147,9 @@ const ShopTable = () => {
     
   </div>
   );
+  
 };
+
+
 
 export default ShopTable;

@@ -3,7 +3,9 @@ import Image from "next/image";
 
 
 const ClothingTable = () => {
-  
+   
+
+    
     return (
         <div className="pt-20 pl-20">
            <h2 className="font-bold text-4xl">BossChiq Fashions</h2>
