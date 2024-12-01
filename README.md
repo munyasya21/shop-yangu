@@ -1,93 +1,68 @@
-
 # **Shop Yangu**
 
+Welcome to **Shop Yangu**, an online shopping platform built using **Next.js** and **Tailwind CSS**. This project features two distinct shops: **BossChiq**, dedicated to ladies' products, and **KakaLuxe**, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
 
+---
 
-Welcome to Shop Yangu, an online shopping platform built using  **Next.js and Tailwind CSS**. This project features two distinct shops: BossChiq, dedicated to ladies' products, and KakaLuxe, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
- 
 # Table of Contents
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
+4. [Components Overview](#components-overview)
+5. [API Integration](#api-integration)
 
-
-Features
-
-
-Technologies Used
-
-
-Getting Started
-
-
-Components Overview
-
-
-API Integration
-
-
-
-
+---
 
 # Features
 
 ## Two Shops:
-
-
-BossChiq: Ladies' products
-
-
-KakaLuxe: Men's products
-
+- **BossChiq**: Ladies' products
+- **KakaLuxe**: Men's products
 
 ## Product Management:
-
-Added new products to each shop
-
-Updated existing products
-
-Deleted products (with warnings if products exist)
-
-
+- Add new products to each shop
+- Update existing products
+- Delete products (with warnings if products exist)
 
 ## Shop Management:
-
-Created new shops
-
-Deleted shops (only if they have no products)
+- Create new shops
+- Delete shops (only if they have no products)
 
 ## User Interface:
+- Utilized **Tailwind CSS** for responsive and modern design
+- Icons are implemented using **Ionicons**
 
-Utilized **Tailwind CSS** for responsive and modern design
+## Static Site Generation:
+- Utilizes `getStaticProps` for fetching data at build time
 
-Icons are implemented using Ionicons
-
-**Static Site Generation**:
-Utilizes getStaticProps for fetching data at build time
-
+---
 
 # Technologies Used
 
-**Next.js**: A React framework for building server-rendered applications.
+- **Next.js**: A React framework for building server-rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
+- **Ionicons**: A set of premium icons for web and mobile applications.
+- **db.json**: A mock database file used for storing shop and product data.
 
-
-**Tailwind CSS**: A utility-first CSS framework for creating custom designs.
-
-
-**Ionicons**: A set of premium icons for web and mobile applications.
-
-
-**db.json**: A mock database file used for storing shop and product data.
-
-
+---
 
 # Getting Started
+
 To get a local copy of this project up and running, follow these steps:
 
-Clone the Repository:git clone https://github.com/munyasy21/shop-yangu.git
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/munyasy21/shop-yangu.git
+   cd shop-yangu
 
-cd shop-yangu
 
-Install Dependencies:
+## Install Dependencies
 
+To install the project dependencies, run the following command:
+
+```bash
 npm install
+
 
 Run the Development Server:npm run dev
 
