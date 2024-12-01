@@ -37,6 +37,7 @@ Clone the Repository:git clone https://github.com/munyasy21/shop-yangu.git
 cd shop-yangu
 Install Dependencies:npm install
 Run the Development Server:npm run dev
+My application will be running at http://localhost:3000.
 Components Overview
 Products Table:
 Located under the components directory.
