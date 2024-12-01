@@ -20,13 +20,13 @@ Welcome to **Shop Yangu**, an online shopping platform built using **Next.js** a
 - **KakaLuxe**: Men's products
 
 ## Product Management:
-- Add new products to each shop
-- Update existing products
-- Delete products (with warnings if products exist)
+- Added new products to each shop
+- Updated existing products
+- Deleted products (with warnings if products exist)
 
 ## Shop Management:
-- Create new shops
-- Delete shops (only if they have no products)
+- Created new shops
+- Deleted shops (only if they have no products)
 
 ## User Interface:
 - Utilized **Tailwind CSS** for responsive and modern design
