@@ -3,7 +3,7 @@
 
 
 
-Welcome to Shop Yangu, an online shopping platform built using Next.js and Tailwind CSS. This project features two distinct shops: BossChiq, dedicated to ladies' products, and KakaLuxe, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
+Welcome to Shop Yangu, an online shopping platform built using  **Next.js and Tailwind CSS**. This project features two distinct shops: BossChiq, dedicated to ladies' products, and KakaLuxe, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
  
 # Table of Contents
 
