@@ -1,11 +1,11 @@
-# Heading One
-**Shop Yangu**
-Shop Yangu
+
+# **Shop Yangu**
+
 
 
 Welcome to Shop Yangu, an online shopping platform built using Next.js and Tailwind CSS. This project features two distinct shops: BossChiq, dedicated to ladies' products, and KakaLuxe, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
-
-Table of Contents
+ 
+# Table of Contents
 
 
 Features
@@ -27,14 +27,14 @@ API Integration
 Features
 
 
-Two Shops:
+# Two Shops:
 
 
 BossChiq: Ladies' products
 KakaLuxe: Men's products
 
 
-Product Management:
+# Product Management:
 
 Add new products to each shop
 
@@ -44,7 +44,7 @@ Delete products (with warnings if products exist)
 
 
 
-Shop Management:
+# Shop Management:
 
 Create new shops
 Delete shops (only if they have no products)
@@ -55,18 +55,22 @@ Static Site Generation:
 Utilizes getStaticProps for fetching data at build time
 
 
-Technologies Used
+# Technologies Used
 
-Next.js: A React framework for building server-rendered applications.
-
-Tailwind CSS: A utility-first CSS framework for creating custom designs.
-
-Ionicons: A set of premium icons for web and mobile applications.
-db.json: A mock database file used for storing shop and product data.
+**Next.js**: A React framework for building server-rendered applications.
 
 
+**Tailwind CSS**: A utility-first CSS framework for creating custom designs.
 
-Getting Started
+
+**Ionicons**: A set of premium icons for web and mobile applications.
+
+
+**db.json**: A mock database file used for storing shop and product data.
+
+
+
+# Getting Started
 To get a local copy of this project up and running, follow these steps:
 
 Clone the Repository:git clone https://github.com/munyasy21/shop-yangu.git
@@ -81,7 +85,7 @@ Run the Development Server:npm run dev
 
 My application will be running at http://localhost:3000.
 
-Components Overview
+# Components Overview
 
 
 Products Table:
