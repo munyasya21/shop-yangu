@@ -67,15 +67,16 @@ npm install
 
 
 
+# Run the Development Server
 
-## Run the Development Server
-
-To start the development server, run the following command:
+**To start the development server, run the following command**:
 
 ```bash
 npm run dev
 ```
 ```bash
+
+
 
 
 # Components Overview
