@@ -61,7 +61,10 @@ To get a local copy of this project up and running, follow these steps:
 To install the project dependencies, run the following command:
 
 ```bash
-npm install
+npm install 
+```
+```
+
 
 
 Run the Development Server:npm run dev
