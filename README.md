@@ -51,23 +51,42 @@ Utilizes Tailwind CSS for responsive and modern design
 Icons are implemented using Ionicons
 Static Site Generation:
 Utilizes getStaticProps for fetching data at build time
+
+
 Technologies Used
+
 Next.js: A React framework for building server-rendered applications.
+
 Tailwind CSS: A utility-first CSS framework for creating custom designs.
+
 Ionicons: A set of premium icons for web and mobile applications.
 db.json: A mock database file used for storing shop and product data.
+
+
+
 Getting Started
 To get a local copy of this project up and running, follow these steps:
 
 Clone the Repository:git clone https://github.com/munyasy21/shop-yangu.git
+
 cd shop-yangu
-Install Dependencies:npm install
+
+Install Dependencies:
+
+npm install
+
 Run the Development Server:npm run dev
+
 My application will be running at http://localhost:3000.
+
 Components Overview
+
+
 Products Table:
 Located under the components directory.
 Manages the addition, deletion, and updating of products.
+
+
 Shop Management:
 Allows the creation and deletion of shops.
 Provides warnings for actions that cannot be performed if products are associated with a shop.
