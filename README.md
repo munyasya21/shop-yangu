@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Shop Yangu
+Welcome to Shop Yangu, an online shopping platform built using Next.js and Tailwind CSS. This project features two distinct shops: BossChiq, dedicated to ladies' products, and KakaLuxe, focused on men's products. Below you will find an overview of the features, technologies used, and how to get started with the project.
 
-## Getting Started
+Table of Contents
+Features
+Technologies Used
+Getting Started
+Components Overview
+API Integration
+Contributing
+License
+Features
+Two Shops:
+BossChiq: Ladies' products
+KakaLuxe: Men's products
+Product Management:
+Add new products to each shop
+Update existing products
+Delete products (with warnings if products exist)
+Shop Management:
+Create new shops
+Delete shops (only if they have no products)
+User Interface:
+Utilizes Tailwind CSS for responsive and modern design
+Icons are implemented using Ionicons
+Static Site Generation:
+Utilizes getStaticProps for fetching data at build time
+Technologies Used
+Next.js: A React framework for building server-rendered applications.
+Tailwind CSS: A utility-first CSS framework for creating custom designs.
+Ionicons: A set of premium icons for web and mobile applications.
+db.json: A mock database file used for storing shop and product data.
+Getting Started
+To get a local copy of this project up and running, follow these steps:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Clone the Repository:git clone https://github.com/munyasy21/shop-yangu.git
+cd shop-yangu
+Install Dependencies:npm install
+Run the Development Server:npm run dev
+Components Overview
+Products Table:
+Located under the components directory.
+Manages the addition, deletion, and updating of products.
+Shop Management:
+Allows the creation and deletion of shops.
+Provides warnings for actions that cannot be performed if products are associated with a shop.
+API Integration
+Data Fetching:
+The application fetches data from db.json to populate the products and shops.
+Utilizes asynchronous functions with getStaticProps for efficient data handling.

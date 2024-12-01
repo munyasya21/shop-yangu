@@ -184,7 +184,7 @@ const ProductTable = ({data}) => {
         
       </thead>
       <tbody>
-        {data.map((product) => (
+        {data?.map((product) => (
         <tr>
         <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">{product.name}</td>
         <td class=" h-16 px-4 py-2 w-[400px] text-black text-sm font-normal leading-normal">$20</td>

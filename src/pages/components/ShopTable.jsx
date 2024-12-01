@@ -95,9 +95,9 @@ const ShopTable = ({data}) => {
                     </tr>
                   </thead>
                   <tbody>
-                  {data.map((shop,index) => 
+                  {data?.map((shop,index) => 
                       (
-                        <tr key={index} class="border-t border-t-[#3b4954]">
+                        <tr key={index} class="border-t border-t-[#d0dae2]">
                         <td class=" h-16 px-4 py-2 w-96 text-white text-sm font-normal leading-normal">
                         <a href="/clothing-management" class="text-white hover:underline">{shop.title}</a>
                         </td>
