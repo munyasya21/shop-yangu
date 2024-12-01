@@ -26,8 +26,9 @@ API Integration
 
 
 
+# Features
 
-# Two Shops:
+## Two Shops:
 
 
 BossChiq: Ladies' products
@@ -36,7 +37,7 @@ BossChiq: Ladies' products
 KakaLuxe: Men's products
 
 
-# Product Management:
+## Product Management:
 
 Added new products to each shop
 
@@ -46,13 +47,13 @@ Deleted products (with warnings if products exist)
 
 
 
-# Shop Management:
+## Shop Management:
 
 Created new shops
 
 Deleted shops (only if they have no products)
 
-# User Interface:
+## User Interface:
 
 Utilized **Tailwind CSS** for responsive and modern design
 
