@@ -19,9 +19,14 @@ const ShopManagementPage = ({ data }) => {
 };
 
 export default ShopManagementPage;
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   const res = await fetch('http://localhost:3000/shops');
-  const data = await res.json();
+  const data = await fetchData(context.params.id)
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
 
   return {
       props: {
