@@ -24,7 +24,7 @@ API Integration
 
 
 
-Features
+
 
 
 # Two Shops:
@@ -103,7 +103,11 @@ Manages the addition, deletion, and updating of products.
 Shop Management:
 Allows the creation and deletion of shops.
 Provides warnings for actions that cannot be performed if products are associated with a shop.
-API Integration
-Data Fetching:
-The application fetches data from db.json to populate the products and shops.
-Utilizes asynchronous functions with getStaticProps for efficient data handling.
+
+
+# API Integration
+
+**Data Fetching**:
+The application fetches data from **db.json** to populate the products and shops.
+
+Utilizes asynchronous functions with **getStaticProps** for efficient data handling.
