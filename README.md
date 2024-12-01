@@ -31,27 +31,34 @@ Features
 
 
 BossChiq: Ladies' products
+
+
 KakaLuxe: Men's products
 
 
 # Product Management:
 
-Add new products to each shop
+Added new products to each shop
 
-Update existing products
+Updated existing products
 
-Delete products (with warnings if products exist)
+Deleted products (with warnings if products exist)
 
 
 
 # Shop Management:
 
-Create new shops
-Delete shops (only if they have no products)
-User Interface:
-Utilizes Tailwind CSS for responsive and modern design
+Created new shops
+
+Deleted shops (only if they have no products)
+
+# User Interface:
+
+Utilized **Tailwind CSS** for responsive and modern design
+
 Icons are implemented using Ionicons
-Static Site Generation:
+
+**Static Site Generation**:
 Utilizes getStaticProps for fetching data at build time
 
 
