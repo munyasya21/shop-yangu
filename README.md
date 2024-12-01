@@ -52,7 +52,7 @@ To get a local copy of this project up and running, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/munyasy21/shop-yangu.git
+   git clone **https://github.com/munyasy21/shop-yangu.git**
    cd shop-yangu
 
 
@@ -63,13 +63,20 @@ To install the project dependencies, run the following command:
 ```bash
 npm install 
 ```
+``` bash
+
+
+
+
+## Run the Development Server
+
+To start the development server, run the following command:
+
+```bash
+npm run dev
 ```
+```bash
 
-
-
-Run the Development Server:npm run dev
-
-My application will be running at http://localhost:3000.
 
 # Components Overview
 
